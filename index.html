@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Galería de Productos con funcionalidad de carrito de compras">
+  <title>Galería de Productos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>NUESTROS PRODUCTOS</h1>
+  </header>
+  <main>
+    <section class="producto-galeria">
+      <article class="producto-ficha">
+        <h2>Smartphone plegable</h2>
+        <p>Un dispositivo innovador con pantalla flexible, ideal para usuarios que buscan lo último en tecnología.</p>
+        <p class="precio">$900.000 </p>
+        <button class="add-to-cart" data-name="Smartphone plegable" data-price="900000">Agregar al carrito</button>
+      </article>
+      <article class="producto-ficha">
+        <h2>Auriculares inalámbricos</h2>
+        <p>Disfruta de tu música favorita sin cables a un precio asequible. Perfectos para escuchar música mientras haces ejercicio o te relajas.</p>
+        <p class="precio">$200.000</p>
+        <button class="add-to-cart" data-name="Auriculares inalámbricos" data-price="200000">Agregar al carrito</button>
+      </article>
+      <article class="producto-ficha">
+        <h2>Consola de videojuegos</h2>
+        <p>Sumérgete en mundos virtuales con gráficos realistas y una experiencia de juego inigualable.</p>
+        <p class="precio">$950.000</p>
+        <button class="add-to-cart" data-name="Consola de videojuegos" data-price="950000">Agregar al carrito</button>
+      </article>
+    </section>
+  </main>
+
+  <!-- MODAL-->
+  <div class="cart-modal hidden" id="cartModal" aria-hidden="true" role="dialog" aria-labelledby="cartTitle">
+    <div class="cart-content">
+      <h2 id="cartTitle">Carrito</h2>
+      <ul id="cartItems" aria-live="polite" aria-relevant="additions removals"></ul>
+      <p>Total: $<span id="cartTotal">0.000.000</span></p>
+      <div class="cart-buttons">
+        <button id="clearCart">Limpiar Carrito</button>
+        <button id="continueShopping">Seguir Comprando</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
